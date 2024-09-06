@@ -1,6 +1,5 @@
 package Utility;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -13,10 +12,7 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.io.FileHandler;
 
 public class Excel_Utility {
 	public static WebDriver driver;
@@ -133,31 +129,6 @@ public class Excel_Utility {
 		fi.close();
 		fo.close();
 	}
-//	public static void getScreenshot()
-//	{
-//		TakesScreenshot ts=(TakesScreenshot)driver;
-//		File src=ts.getScreenshotAs(OutputType.FILE);
-//		File dest=new File(System.getProperty("user.dir")+"//ScreenShots//OHRM"+System.currentTimeMillis()+".png");
-//		try {
-//			FileHandler.copy(src, dest);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//	}
-	  public static void captureScreenshot(Object fileName)
-		{
-			TakesScreenshot ts=(TakesScreenshot)driver;
-			File src=ts.getScreenshotAs(OutputType.FILE);
-			File dest=new File(System.getProperty("user.dir")+"//ScreenShots//OHRM"+System.currentTimeMillis()+".png");
-			try {
-				FileHandler.copy(src, dest);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			System.out.println("ScreenShot captured!");
-		}
 }
 
 

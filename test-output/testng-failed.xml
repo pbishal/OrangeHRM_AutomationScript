@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestScenarios.datDrivenTest">
+      <class name="scenario2Test.AdminPageTest">
         <methods>
-          <include name="loginTest" invocation-numbers="1 2 3 4"/>
-          <include name="setup"/>
           <include name="tearDown"/>
+          <include name="pageSetup"/>
+          <include name="getAllMenu"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- TestScenarios.datDrivenTest -->
+      </class> <!-- scenario2Test.AdminPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

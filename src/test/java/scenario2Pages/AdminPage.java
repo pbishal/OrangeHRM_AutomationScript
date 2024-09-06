@@ -28,11 +28,14 @@ public AdminPage(WebDriver driver)
 	public void getMenu()
 	{
 		List<WebElement> allElements = driver.findElements(menu);
-		System.out.println(allElements);
+
 		System.out.println("Total menu options are: " + allElements.size());
 
 		for (WebElement element : allElements) {
 			System.out.println(element.getText());
+		}
+		for (WebElement element : allElements) {
+//			System.out.println(element.getText());
 			if(element.getText().contains("Admin")) {
 				element.click();
 				break;
